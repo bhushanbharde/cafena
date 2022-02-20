@@ -1,0 +1,630 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap');
+
+:root{
+    /* --main-color:#d3ad7f; */
+    /* --dark: #49281a; */
+    /* --light: #dfb78c; */
+    --main-color: #c7a17a;
+    --black:#13131a;
+    --bg:#010103;
+    --border:.1rem solid rgba(255,255,255,.2);
+    --text: #aaa;
+}
+
+*{
+    /* font-family: 'Bebas Neue', cursive; */
+    font-family: 'Josefin Sans', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    transition: .2s linear;
+    color: #fff;
+}
+
+body {
+    background: var(--bg);
+}
+
+.btn {
+    color: #fff;
+    font-size: .65rem;
+    padding: .7rem 1.4rem;
+    margin: 0;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-top: 1rem;
+    display: inline-block;
+    /* min-width: 8rem; */
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background: var(--main-color);
+}
+
+.btn-secondary {
+    background: transparent;   
+    border: var(--border);
+    margin-left: 1rem;
+}
+
+.btn:hover {
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+section {
+    padding: 4rem 8rem;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5rem;
+    font-weight: 100;
+    margin-bottom: 3rem;
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    padding: 1rem 9%;
+    z-index: 1000;
+    background: var(--bg);
+}
+
+header .logo {
+    height: 4rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav a {
+    text-transform: uppercase;
+    padding: 0 1rem;
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+header nav a:hover {
+    color: var(--main-color);
+}
+
+#menu-btn {
+    display: none;
+}
+
+header .icons div {
+    margin-left: 1rem;
+}
+
+header .icons div:hover {
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+header .search-form {
+    position: absolute;
+    top: 115%;
+    right: 9%;
+    background: #fff;
+    width: 20rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+header .search-form.active {
+    transform: scaleY(1);
+
+}
+
+header .search-form input {
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+}
+
+header .search-form label {
+    cursor: pointer;
+    background: #fff;
+    margin-right: 1rem;
+    color: var(--black);
+}
+
+header .cart-container {
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: calc(100vh);
+    width: 20rem;
+    padding: 0 1rem;
+    color: var(--black);
+}
+
+header .cart-container.active {
+    right: 0;
+}
+
+header .cart-container .cart-item {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 1.5rem;
+
+}
+
+header .cart-container .cart-item .fa-times {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+header .cart-container .cart-item .fa-times:hover {
+    color: var(--main-color);
+}
+
+header .cart-container .cart-item img {
+    height: 4rem;
+}
+
+header .cart-container .cart-item .content h3 {
+    font-size: 1rem;
+    color: var(--black);
+    padding-bottom: .5rem;
+}
+
+header .cart-container .cart-item .content .price {
+    color: var(--main-color);
+}
+
+header .cart-container .btn {
+    width: 100%;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url('./images/home-img.jpeg');
+    background-position: center;
+    background-size: cover;
+    padding-top: 10rem;
+}
+
+.home > div {
+    max-width: 40%;
+
+}
+
+.home .btn-box {
+    width: 100% !important;
+}
+
+.home h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 4.5rem;
+    line-height: 1;
+    font-weight: 100;
+}
+
+.home p {
+    color: var(--text);
+    margin: 1rem 0;
+}
+
+.home .social {
+    font-size: .8rem;
+    font-weight: 600;
+    margin-top: 5rem;
+    text-transform: uppercase;
+}
+
+.home .social span {
+    margin-right: 2rem;
+}
+
+.home .social i {
+    font-size: .9rem;
+    margin-right: .5rem;
+}
+
+.feature {
+    display: flex;
+    gap: 2rem;
+}
+
+.feature .card {
+    position: relative;
+    overflow: hidden;
+    border: var(--border);
+}
+
+.feature .card:hover img{
+    /* border-top: 3px solid rgb(255, 0, 0); */
+    transform: scale(1.1);
+}
+
+.feature .card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+    display: block;
+}
+
+.feature .card .feature-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+}
+
+.feature .card .feature-content span {
+    font-size: 1rem;
+    color: var(--main-color);
+}
+
+.feature .card .feature-content h3 {
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 1px;
+    font-weight: 100;
+    font-size: 1.5rem;
+    margin: .5rem 0;
+}
+
+.feature .card .feature-content p {
+    color: #b1b1b1;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: right;
+}
+
+.about .about-img {
+    width: 400px;
+}
+
+.about > div {
+    max-width: 50%;
+}
+
+.about h2 {
+    text-align: right;
+    line-height: 1;
+}
+
+.about p {
+    margin: 1rem 0;
+    text-align: right;
+    color: var(--text);
+}
+
+.about .history {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    color: var(--text);
+}
+
+.about .history span {
+    font-size: .75rem;
+    letter-spacing: 1px;
+}
+
+.about .history div {
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+}
+
+.about .history div i {
+    border: var(--border);
+    border-radius: 50%;
+    padding: 1rem;
+    margin-left: 1rem;
+    font-size: .7rem;
+}
+
+.about .history div i:hover {
+    cursor: pointer;
+}
+
+.menu h2 {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.menu .menu-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+
+.menu .menu-item {
+    background: var(--black);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10rem;
+    padding: 1.5rem;
+    height: 5rem;
+    border: var(--border);
+}
+
+.menu .menu-item img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%,-50%);
+    width: 60px;
+}
+
+.menu .menu-item h4 {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 1.25rem;
+}
+
+.menu .menu-item .price {
+    color: var(--main-color);
+    text-align: right;
+}
+
+.top-grade .grade-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-grade h2 {
+    text-align: center;
+}
+
+.top-grade .grade-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-grade .grade-container img {
+    width: 60%;
+}
+
+.top-grade .grade-container h3 {
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 1px;
+    font-weight: 100;
+    font-size: 1.25rem;
+    margin: 1rem 0;
+}
+
+.top-grade .grade-container p {
+    text-align: center;
+    color: var(--text);
+    line-height: 1.4;
+}
+
+.top-grade .counter {
+    margin-top: 4rem;
+    border-bottom: var(--border);
+    position: relative;
+    overflow: visible;
+}
+
+.top-grade .counter div {
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    z-index: 2;
+}
+
+.top-grade .counter div span {
+    padding: .75rem;
+    border: var(--border);
+    border-radius: 50%;
+    font-size: .8rem;   
+    background: var(--bg);
+}
+
+.top-grade .counter div span:hover {
+    cursor: default;
+}
+
+.product .heading-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product .heading-block h2,
+.product .heading-block a {
+    margin: 0;
+}
+
+.product .product-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.product .product-container .product-card {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 4px;
+    /* border: var(--border); */
+    padding: 1.5rem 3rem;
+}
+
+.product .product-container .product-card:hover {
+    background: var(--black);
+}
+
+.product .product-container .product-card .product-btn-block i {
+    padding: .5rem;
+    border: var(--border);
+    border-radius: 4px;
+}
+
+.product .product-container .product-card img {
+    padding: 1.5rem 0;
+    width: 120px;
+    margin: auto;
+}
+
+.product .product-container .product-card .product-details {
+    margin-top: 1rem;
+}
+
+.product .product-container .product-card .product-details i {
+    color: var(--main-color);
+    font-size: .8rem;
+}
+
+.product .product-container .product-card .product-details span {
+    font-size: .8rem;
+    color: var(--text);
+}
+
+.product .product-container .product-card .product-details h5 {
+    font-weight: 500;
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+
+.product .product-container .product-card h6 {
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+.text-primary {
+    color: var(--main-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:800px) { 
+    #menu-btn {
+        display: inline-block;
+    }
+
+    header nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: #fff;
+        height: calc(100vh - 7rem);
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 20rem;
+    }
+
+    header nav.active {
+        right: 0%;
+    }
+
+    header nav a {
+        color: var(--black);
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    header .search-form {
+        width: 90%;
+        /* right: 2rem; */
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html{
+    /* font-size: 62.5%; */
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: var(--black);
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: .8rem;
+}
+
+button {
+    padding: 1rem;
+    /* background: var(--dark); */
+    color: #fff;
+    display: block;
+}
