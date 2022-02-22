@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    padding: 1rem 9%;
+    z-index: 1000;
+    background: var(--bg);
+}
+
+header .logo {
+    height: 4rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav a {
+    text-transform: uppercase;
+    padding: 0 1rem;
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+header nav a:hover {
+    color: var(--main-color);
+}
+
+#menu-btn {
+    display: none;
+}
+
+header .icons div {
+    margin-left: 1rem;
+}
+
+header .icons div:hover {
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+header .search-form {
+    position: absolute;
+    top: 115%;
+    right: 9%;
+    background: #fff;
+    width: 20rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+header .search-form.active {
+    transform: scaleY(1);
+
+}
+
+header .search-form input {
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+}
+
+header .search-form label {
+    cursor: pointer;
+    background: #fff;
+    margin-right: 1rem;
+    color: var(--black);
+}
+
+header .cart-container {
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: calc(100vh);
+    width: 20rem;
+    padding: 2rem;
+    color: var(--black);
+}
+
+header .cart-container.active {
+    right: 0;
+}
+
+header .cart-container .cart-item {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 1.5rem;
+
+}
+
+header .cart-container .cart-item .fa-times {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+header .cart-container .cart-item .fa-times:hover {
+    color: var(--main-color);
+}
+
+header .cart-container .cart-item img {
+    height: 4rem;
+}
+
+header .cart-container .cart-item .content h3 {
+    font-size: 1.2rem;
+    color: var(--black);
+    /* padding-bottom: .5rem; */
+}
+
+header .cart-container .cart-item .content .price {
+    color: var(--main-color);
+}
+
+header .cart-container .btn {
+    width: 100%;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+footer {
+    padding: 4rem 8rem;
+}
+
+footer .contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .contact > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+footer .contact i {
+    color: var(--main-color);
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+footer .contact .phone,
+footer .contact .address {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+
+footer .contact strong {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+footer .contact span {
+    color: var(--text);
+    margin-left: .5rem;
+}
+
+footer .contact .email {
+    display: flex;
+    border-bottom: var(--border);
+}
+
+footer .contact .email input {
+    width: 300px;
+    background: var(--bg);
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+footer .contact .email button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 0;
+    color: #fff;
+    background: var(--bg);
+    text-transform: uppercase;
+    font-size: .7rem;
+    letter-spacing: 1.5px;
+}
+
+footer .contact .email button:hover {
+    cursor: pointer;
+}
+
+footer .contact .email button i {
+    color: #fff;
+    margin-left: .5rem;
+    font-size: .8rem;
+}
+
+footer .footer-logo {
+    margin: 4rem 0 0rem 0;
+    height: 4rem;
+}
+
+footer .socaial-links {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: var(--border);
+    align-items: baseline;
+    padding-bottom: 1rem;
+}
+
+footer .socaial-links p {
+    width: 70%;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+footer .socaial-links a {
+    color: var(--text);
+    border-radius: 4px;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    border: var(--border);
+    margin: .5rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+footer .socaial-links a:hover {
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+footer .footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    width: 50%;
+    /* padding: 1.5rem 0; */
+}
+
+footer .footer-links a {
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+
+footer .footer-links a:hover {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+@media screen and (max-width:1024px) {
+    * {
+        font-size: 95%;
+    }
+
+
+    footer .contact .email input {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width:800px) { 
+    #menu-btn {
+        display: inline-block;
+    }
+
+    header nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: #fff;
+        height: calc(100vh - 7rem);
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 12rem;
+    }
+
+    header nav.active {
+        right: 0%;
+    }
+
+    header nav a {
+        color: var(--black);
+        font-size: 1rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    header .search-form {
+        width: 90%;
+        /* right: 2rem; */
+    }
+
+
+}
+
+@media screen and (max-width:768px) {
+
+    header .logo {
+        height: 3rem;
+    }
+
+    footer {
+        padding: 3rem 4rem 2rem 4rem;
+    }
+
+    footer .contact > div:first-child {
+        flex-direction: column;
+    }
+
+    footer .contact {
+        align-items: flex-start;
+    }
+
+    footer .contact .email input {
+        width: 160px;
+    }
+
+    footer .footer-logo {
+        margin-bottom: 1rem;
+        height: 3rem;
+    }
+
+    footer .socaial-links {
+        align-items: unset;
+    }
+
+    footer .socaial-links div:last-child {
+        display: flex;
+        align-items: baseline;
+        padding-bottom: 0;
+    }
+
+    footer .footer-links a {
+        font-size: .75rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    * {
+        font-size: 100%;
+    }
+
+
+    header .icons {
+        font-size: 1rem;
+    }
+
+    header .search-form {
+        width: 80%;
+        padding: 1.5rem 0;
+    }
+
+    header .search-form input {
+        font-size: 1.2rem;
+    }
+
+    footer{
+        padding: 4rem 2rem 2rem 2rem;
+    }
+
+    footer .contact {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    footer .contact i {
+        font-size: .9rem;
+        margin-right: .5rem;
+    }
+
+    footer .contact > div:first-child {
+        flex-direction: column;
+        justify-content: flex-start;
+        font-size: .9rem;
+        gap: .7rem;
+    }
+
+    footer .contact .email {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    footer .contact .email input {
+        width: 100%;
+        padding-right: 1rem;
+    }
+
+    footer .contact .email i {
+        margin-right: 0;
+    }
+
+    footer .footer-logo {
+        margin: 6rem auto 1rem auto;
+        display: block;
+        height: 3rem;
+    }
+
+    footer .socaial-links {
+        flex-direction: column;
+    }
+
+    footer .socaial-links p {
+        width: 100%;
+        text-align: center;
+    }
+
+    footer .socaial-links div:last-child {
+        display: flex;
+        margin-top: 2rem;
+        justify-content: center;
+    }
+
+    footer .footer-links {
+        width: 100%;
+    }
+}
+
+html::-webkit-scrollbar{
+    width: .6rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: var(--black);
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: .6rem;
+}
+
+button {
+    padding: 1rem;
+    /* background: var(--dark); */
+    color: #fff;
+    display: block;
+}

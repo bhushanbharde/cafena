@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=h, initial-scale=1.0">
     <title>CAFENA The Coffee Store</title>
 
+    <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/7305e897d5.js" crossorigin="anonymous"></script>
     <link rel="icon" href="./images/logo.png">
@@ -15,7 +16,7 @@
 <body>
 
     <header>
-        <a href="#" >
+        <a href="index.html" >
             <img src="./images/logo.png" alt="" class="logo">
         </a>
         <nav id="navbar">
@@ -64,7 +65,7 @@
                     <div class="price">₹1599/-</div>
                 </div>
             </div>
-            <a href="" class="btn">checkout now</a>
+            <a href="" class="btn btn-primary">checkout now</a>
         </div>
     </header>
 
@@ -74,8 +75,8 @@
             <p>the coffee is brewed by first roasting the green coffee beans over hot coals in brazier. given an
                 opportunity to sample.</p>
             <div class="btn-box">
-                <a href="" class="btn btn-primary">tasty coffee</a>
-                <a href="" class="btn btn-secondary">read more</a>
+                <a href="gallery.html" class="btn btn-primary">tasty coffee</a>
+                <a href="gallery.html" class="btn btn-secondary">read more</a>
             </div>
             <div class="social">
                 <span><i class="fa-brands fa-facebook"></i>facebook</span>
@@ -127,7 +128,7 @@
                     <span>our history</span>
                     <i class="fa fa-play"></i>
                 </div>
-                <a href="" class="btn btn-primary">read more</a>
+                <a href="about.html" class="btn btn-primary">read more</a>
             </div>
         </div>
     </section>
@@ -277,10 +278,9 @@
     <section class="review" id="review">
         <h2>our customer review</h2>
         <div>
-            <img src="./images/quote-img.png" alt="">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque ullam nostrum mollitia porro earum non
-                rem aliquid ducimus velit iusto.</p>
-            <img src="./images/pic-1.png" alt="">
+            <img src="./images/quote-img.png" alt="" class="quote">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati sunt quae, iusto minima quam ducimus archito eos dctus ratione quas unde ad facilis tenetur, molestiae maiores fugit dolor aliquam tempora.</p>
+            <img src="./images/pic-1.png" alt="" class="profile">
             <h5>rasalina de williamson</h5>
             <span>founder & co</span>
         </div>
@@ -288,13 +288,13 @@
 
     <section class="blog" id="blog">
         <div class="heading-block">
-            <h2>cafena news nad blog</h2>
-            <a href="#" class="btn btn-primary"></a>
+            <h2>cafena news and blog</h2>
+            <a href="blog.html" class="btn btn-primary">learn more</a>
         </div>
-        <div>
+        <div class="blog-container">
             <div class="blog-post">
                 <img src="./images/blog-1.jpeg" alt="">
-                <h6><span class="text-primary">by:</span>rasalina\life\23.01.2022</h6>
+                <h6><span class="text-primary">by: </span> rasalina \ life \ 23.01.2022</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                 <a href="#" class="btn btn-link">
                     read more
@@ -304,7 +304,7 @@
 
             <div class="blog-post">
                 <img src="./images/blog-2.jpeg" alt="">
-                <h6><span class="text-primary">by:</span>rasalina\life\23.01.2022</h6>
+                <h6><span class="text-primary">by: </span> rasalina \ life \ 23.01.2022</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                 <a href="#" class="btn btn-link">
                     read more
@@ -314,7 +314,7 @@
 
             <div class="blog-post">
                 <img src="./images/blog-3.jpeg" alt="">
-                <h6><span class="text-primary">by:</span>rasalina\life\23.01.2022</h6>
+                <h6><span class="text-primary">by: </span> rasalina \ life \ 23.01.2022</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                 <a href="#" class="btn btn-link">
                     read more
@@ -325,38 +325,50 @@
     </section>
 
     <div class="top-navigate">
-        <a href="#" class="top-btn"></a>
-        <span>go to top</span>
+        <a href="#" class="top-btn">
+            <i class="fa-solid fa-arrow-up-long"></i>
+        </a>
     </div>
+    <span class="top-text">go to top</span>
 
     <footer>
-        <div>
-            <div class="phone">
-
-            </div>
-            <div class="address">
-
+        <div class="contact">
+            <div>
+                <div class="phone">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <strong>phone : </strong>
+                    <span>+91 86520 98642</span>
+                </div>
+                <div class="address">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <strong>address : </strong>
+                    <span>30 North West New</span>
+                </div>
             </div>
             <div class="email">
-
+                <input type="email" placeholder="Enter your email">
+                <button type="submit" class="subscribe">
+                    subscribe
+                    <i class="fa-regular fa-paper-plane"></i>
+                </button>
             </div>
         </div>
 
-        <div>
+        <img src="./images/logo.png" alt="" class="footer-logo">
+        <div class="socaial-links">
             <div>
-                <img src="./images/logo.png" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur sequi distinctio rem.</p>
             </div>
-            <div class="socaial-links">
-                <i class="fa fa-facebook"></i>
-                <i class="fa fa-facebook"></i>
-                <i class="fa fa-facebook"></i>
-                <i class="fa fa-facebook"></i>
-                <i class="fa fa-facebook"></i>
+            <div class="">
+                <a href="" class="fa-brands fa-twitter"></a>
+                <a href="" class="fa-brands fa-facebook-f"></a>
+                <a href="" class="fa-brands fa-youtube"></a>
+                <a href="" class="fa-brands fa-google"></a>
+                <a href="" class="fa-brands fa-instagram"></a>
             </div>
         </div>
-        <hr>
-        <div class="footer-menu-links">
+        
+        <div class="footer-links">
             <a href="#home">home</a>
             <a href="#about">about</a>
             <a href="#menu">menu</a>
